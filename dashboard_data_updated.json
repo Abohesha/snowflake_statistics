@@ -1,0 +1,763 @@
+{
+  "overview": {
+    "totalConversations": 634,
+    "averageConfidence": 40.4,
+    "processedDate": "2025-08-07",
+    "assignee": "All Team Members"
+  },
+  "effectiveness": {
+    "reengagement": {
+      "yes": 187,
+      "no": 75
+    },
+    "sale": {
+      "yes": 18,
+      "no": 244
+    },
+    "botCanDo": {
+      "yes": 205,
+      "no": 45
+    }
+  },
+  "labels": [
+    {
+      "name": "no response from the client",
+      "value": 134,
+      "percentage": 21.1
+    },
+    {
+      "name": "no matching maids found",
+      "value": 70,
+      "percentage": 11.0
+    },
+    {
+      "name": "Razan - For Case3:",
+      "value": 25,
+      "percentage": 3.9
+    },
+    {
+      "name": "System transfer (no reason ) ",
+      "value": 14,
+      "percentage": 2.2
+    },
+    {
+      "name": "the bot hallicunate (unknown)",
+      "value": 8,
+      "percentage": 1.3
+    },
+    {
+      "name": "providing a shortlist link while the bot sent one",
+      "value": 8,
+      "percentage": 1.3
+    },
+    {
+      "name": "sys: Attention: V3 Prospect!",
+      "value": 5,
+      "percentage": 0.8
+    },
+    {
+      "name": "Agent intervened after system failed to find any maids matching consumer's requirements.",
+      "value": 4,
+      "percentage": 0.6
+    },
+    {
+      "name": "fully handled",
+      "value": 4,
+      "percentage": 0.6
+    },
+    {
+      "name": "two system transfer: the client needs a specific maid to hire",
+      "value": 3,
+      "percentage": 0.5
+    },
+    {
+      "name": "System transfer  (no reason and sys: ARP API failed, no bot) ",
+      "value": 3,
+      "percentage": 0.5
+    },
+    {
+      "name": "agent stepped in without a reason (with bot skill)",
+      "value": 3,
+      "percentage": 0.5
+    },
+    {
+      "name": "after calling the client",
+      "value": 3,
+      "percentage": 0.5
+    },
+    {
+      "name": "Two system transfer with no bot",
+      "value": 3,
+      "percentage": 0.5
+    },
+    {
+      "name": "system transfer: no matching maids found",
+      "value": 3,
+      "percentage": 0.5
+    },
+    {
+      "name": "the client asked for a call (called)",
+      "value": 3,
+      "percentage": 0.5
+    },
+    {
+      "name": "System transfer (no reason + no bot) ",
+      "value": 2,
+      "percentage": 0.3
+    },
+    {
+      "name": "System transfer (client asked if the nanny will arrive tmrw) ",
+      "value": 2,
+      "percentage": 0.3
+    },
+    {
+      "name": "System transfer (no matching maids found) ",
+      "value": 2,
+      "percentage": 0.3
+    },
+    {
+      "name": "the client asked about a specific maid to hire",
+      "value": 2,
+      "percentage": 0.3
+    },
+    {
+      "name": "no bot, repeated messages from system",
+      "value": 2,
+      "percentage": 0.3
+    },
+    {
+      "name": "agent stepped in at the end with no need (You are most welcome, please feel free to reach out for any further assistance)",
+      "value": 2,
+      "percentage": 0.3
+    },
+    {
+      "name": "client asked to talk to a human, then the agent call him",
+      "value": 2,
+      "percentage": 0.3
+    },
+    {
+      "name": "System transfer (no reason) ",
+      "value": 2,
+      "percentage": 0.3
+    },
+    {
+      "name": "wrong info from the bot",
+      "value": 2,
+      "percentage": 0.3
+    },
+    {
+      "name": "two system transfer in the beginning: no clear reason",
+      "value": 2,
+      "percentage": 0.3
+    },
+    {
+      "name": "system transfer: no reason",
+      "value": 2,
+      "percentage": 0.3
+    },
+    {
+      "name": "no matching maids found\nno response from the client",
+      "value": 2,
+      "percentage": 0.3
+    },
+    {
+      "name": "fully handled ",
+      "value": 2,
+      "percentage": 0.3
+    },
+    {
+      "name": "when the consumer's skill changed to an agent skill, the agent respond ",
+      "value": 2,
+      "percentage": 0.3
+    },
+    {
+      "name": "bot transfered the client to sales team",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "provided a list knowing that the bot provided one",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "np provided videos + no response from the bot \nno response from the client\nagent confirming the hiring at the end",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "unknown",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "Agent intervened for a follow up with consumer after 55 minutes without reply from consumer.",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "Agent intervened for a follow up with consumer after 10.5 hours (overnight) without reply from consumer.",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "Agent intervened for a follow up with consumer after 20 minutes without reply from consumer.",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "Agent interevened after private message from system to support the prospect after consumer inquired about part-time maids.",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "Agent intervened for a follow up with consumer after 60 minutes without reply from consumer.",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "Agent intervened for a follow up with consumer after 15 minutes without reply from consumer.",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "Agent intervened after bot failed to reply for 11 minutes.",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "Agent intervened after consumer complained they weren't offered the same package price as their brother.",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "Agent intervened for a follow up with consumer after 35 minutes without reply from consumer.",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "Agent intervened after consumer expressed their disinterest in hiring a maid after inquiring about hiring one. ",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "Agent interevened after private message from system to support the prospect after consumer complained about prices.",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "the bot is delayed in responding + the agent provided a link\nno matching maids found",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "the above one should be here",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "the agent mentioned that the maid is available now",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "no response from the bot for providing the offer letter",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "the bot didn't provide the video link",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "bot: Thanks for contacting us! We'll get back to you with an answer first thing in the morning.\nno matching maids found",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "the bot transferred the client to a live agent because he doesn't have the ability to generate a hiring link\nno response from the client",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "no response from the bot\nproviding a shortlist link while the bot sent one\nwrong info",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "no bot response (3 mins), the agent provided a link",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "the client want to talk to a real person\nno response fromt the client",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "the conv started with agent skill\nno matching maids found",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "providing a shortlist link while the bot sent one\nclient asked for a call",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "the bot transferred the client to a live agent because he doesn't have the ability to see the maids info after served by the client\nno matching maids found",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "no response from the client\nbot provided wrong info (availabe for hiring)",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "the agent stepped in without a reason, because the client finished his conv",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "two system transfer at the beginning but without a reason (no bot) + consumern started with agent skill",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "agent stepped in at the end mentioning he tried to call the client but no answer",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "asked for a call (further to your call)",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "agent asked the client to fill some info after 2 min from the bot not sending them",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "the bot don't have the infor if the maid is christian ",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "no response from the bot after 5 min + he didn't ask about the family name of the maid",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "the bot can't provide a website link (the client want to share it with someone)",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "no response from the bot (17mins)",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "system transfer: the consumer need a live agent",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "consumer started with agent skill + consumer issue: can't afford the month payment",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "no response from the bot after 3 mins",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "conv started with agent skill (no bot)",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "the bot didn't answer one of the consumer questions",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "bot provided invalid link",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "no response from the bot (after hours)",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "no response from the client\nno response from the client",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "bot provided undesired info",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "stepped in at the end without a reason (you are most wel)",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "two system transfer without a reason",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "bot didn't answer client question\nclient is unsatisfied with the prices\n",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "no bot response\nno matching maids found",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "the client contact the wrong department, so the bot transfer him (it is for cancellation)",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "system transfer: agent try to convince the client about the maids transportation (want to call the client)",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "the bot provided a different link + bot gave wrong info",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "the client don't want to deal with a chat bot (the bot sent the same link)",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "agent stepped in at the end, I don't think there is a reason",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "no response from the bot\nno response from the client",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "client asked for a call (the agent continue the chat, not further your call)",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "the bot sent the same link",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "System transfer  (no reason and no bot) + client unsatisfied with the prices",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "System: Attention: V3 Prospect!",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "system transfer (no reason) ",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "unsatisfied with the price",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "the link is broken",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "Agent stepped in (reported missed info)",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "no reponse from the client + the bot sent a broken link",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "System transfer (client asked to talk to a real person) ",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "System transfer (client asked if the nanny has experience or not) ",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "System transfer (bot started hallucinating) ",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "System transfer(no reason) ",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "no response from the bot",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "agent stepped in bc client was not satistified with prices (with bot skill)",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "System transfer (client wants to talk to a specialist) ",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "agent stepped in (wishes to speak with a live agent on chat and not gpt ), no clear reason",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "System transfer (no response from the client) ",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "System transfer (bot start hallucinating) ",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "when the system's skill changed to \"GPT CC Shad\", the agent respond ",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "System: transfer (no reason ) ",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "the bot transfered the client to the sales team to renew the service",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "no response from the bot (7 mins)",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": " no response from the bot \nagent confirming the hiring at the end",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "bot provided the wrong info\nno response from the client",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "the bot forwarded the conversation to an agent (for the maid's eligibility)",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "no matching maids found + no repsonse from the bot",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": " no bot response (6mins)",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "stepped in without a reason at the end (Sure, we're looking forward to hearing back from you.)",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "the client asked to talk to someone",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "client ask for a call\nthe link didn't open\n",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "no response from client",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "system transfer: no reason,  the client asked for hiring a second maid (in the beginning)",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "bot transfered the client to sales team\nbot hallucination",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "agent started with the conversation (no bot), bot hallucination",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "client ask for a call (called)",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "system transfer: the bot provided wrong info",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "Agent started with the conversation\nstepped in without a reason (when you want to hire a maid) but no need for it",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "two system transfer at the beginnig with no reason\nproviding a shortlist link while the bot sent one\nno response from the client",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "client ask for someone speaks arabic",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "System transfer (the client is frustrated bs msh znb lbot ) ",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "system trasnfer: client asked for a live out maid for 1 week",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "system transfer (bot: Thanks for contacting us! We'll get back to you with an answer first thing in the morning.)",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "the bot transfered the client to someone speaks arabic",
+      "value": 1,
+      "percentage": 0.2
+    },
+    {
+      "name": "providing a shortlist link while the bot sent one\nno response from the client",
+      "value": 1,
+      "percentage": 0.2
+    }
+  ],
+  "patterns": [
+    {
+      "name": "no response from the client",
+      "value": 134,
+      "color": "#FF6B6B"
+    },
+    {
+      "name": "no matching maids found",
+      "value": 70,
+      "color": "#4ECDC4"
+    },
+    {
+      "name": "Razan - For Case3:",
+      "value": 25,
+      "color": "#45B7D1"
+    },
+    {
+      "name": "System transfer (no reason ) ",
+      "value": 14,
+      "color": "#96CEB4"
+    },
+    {
+      "name": "the bot hallicunate (unknown)",
+      "value": 8,
+      "color": "#FFEAA7"
+    },
+    {
+      "name": "providing a shortlist link while the bot sent one",
+      "value": 8,
+      "color": "#DDA0DD"
+    },
+    {
+      "name": "sys: Attention: V3 Prospect!",
+      "value": 5,
+      "color": "#FFB6C1"
+    },
+    {
+      "name": "Agent intervened after system failed to find any maids matching consumer's requirements.",
+      "value": 4,
+      "color": "#98FB98"
+    },
+    {
+      "name": "fully handled",
+      "value": 4,
+      "color": "#F0E68C"
+    },
+    {
+      "name": "two system transfer: the client needs a specific maid to hire",
+      "value": 3,
+      "color": "#D8BFD8"
+    }
+  ],
+  "confidenceDistribution": [
+    {
+      "range": "0-20%",
+      "count": 25,
+      "color": "#FF6B6B"
+    },
+    {
+      "range": "20-40%",
+      "count": 45,
+      "color": "#FFA726"
+    },
+    {
+      "range": "40-60%",
+      "count": 36,
+      "color": "#66BB6A"
+    },
+    {
+      "range": "60-80%",
+      "count": 15,
+      "color": "#42A5F5"
+    },
+    {
+      "range": "80-100%",
+      "count": 9,
+      "color": "#AB47BC"
+    }
+  ]
+}
