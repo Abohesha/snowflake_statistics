@@ -113,35 +113,36 @@ function App() {
         </div>
       </motion.header>
 
-      {/* Navigation */}
-      <nav className="bg-white shadow-sm border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex space-x-8">
-            {['overview', 'effectiveness', 'patterns', 'details'].map((view) => (
-              <button
-                key={view}
-                onClick={() => setSelectedView(view)}
-                className={`py-4 px-1 border-b-2 font-medium text-sm transition-colors ${
-                  selectedView === view
-                    ? 'border-blue-500 text-blue-600'
-                    : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
-                }`}
-              >
-                {view.charAt(0).toUpperCase() + view.slice(1)}
-              </button>
-            ))}
-          </div>
-        </div>
-      </nav>
+             {/* Navigation */}
+       <nav className="bg-white shadow-sm border-b border-gray-200">
+         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+           <div className="flex space-x-8">
+             {['overview', 'effectiveness', 'patterns', 'details', 'noResponse'].map((view) => (
+               <button
+                 key={view}
+                 onClick={() => setSelectedView(view)}
+                 className={`py-4 px-1 border-b-2 font-medium text-sm transition-colors ${
+                   selectedView === view
+                     ? 'border-blue-500 text-blue-600'
+                     : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                 }`}
+               >
+                 {view === 'noResponse' ? 'No Response Details' : view.charAt(0).toUpperCase() + view.slice(1)}
+               </button>
+             ))}
+           </div>
+         </div>
+       </nav>
 
-      {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {selectedView === 'overview' && <OverviewView data={data} />}
-        {selectedView === 'effectiveness' && <EffectivenessView data={data} />}
-        {selectedView === 'patterns' && <PatternsView data={data} />}
-        {selectedView === 'confidence' && <ConfidenceView data={data} />}
-        {selectedView === 'details' && <DetailsView data={data} />}
-      </main>
+             {/* Main Content */}
+       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+         {selectedView === 'overview' && <OverviewView data={data} />}
+         {selectedView === 'effectiveness' && <EffectivenessView data={data} />}
+         {selectedView === 'patterns' && <PatternsView data={data} />}
+         {selectedView === 'confidence' && <ConfidenceView data={data} />}
+         {selectedView === 'details' && <DetailsView data={data} />}
+         {selectedView === 'noResponse' && <NoResponseView data={data} />}
+       </main>
     </div>
   );
 }
@@ -566,11 +567,242 @@ function DetailsView({ data }) {
           </ResponsiveContainer>
         </ChartCard>
       </div>
-    </motion.div>
-  );
-}
-
-// Reusable Components
+         </motion.div>
+   );
+ }
+ 
+ // No Response Details Component
+ function NoResponseView({ data }) {
+   const noResponseData = [
+     {
+       category: "1 - Asking if the client found a suitable maid",
+       questions: [
+         "Have you found a suitable maid you'd like to proceed with hiring, please?",
+         "Have you found a maid you would like to proceed with, please?",
+         "Have you found a maid you'd like to hire, please?",
+         "هل وجدت خادمة ترغب في التعامل معها من فضلك؟",
+         "Have you found a maid you like or would you like me to send you a new list?",
+         "May I know if any of the maids stand out to you? Or would you prefer to view a new list?",
+         "May I ask if any of the maids stand out to you, please?",
+         "May I know if any of the maids stand out to you?",
+         "May I ask if you had the chance to view the list of maids shared, please?",
+         "Would you like to start exploring your best-matching maids, please?",
+         "May I ask what's keeping you from hiring a maid from us today, please?"
+       ],
+       outcomes: [
+         { reengagement: "NO", sale: "NO", botCanDo: "YES", count: 100 },
+         { reengagement: "YES", sale: "NO", botCanDo: "YES", count: 33 },
+         { reengagement: "YES", sale: "YES", botCanDo: "YES", count: 1 }
+       ]
+     },
+     {
+       category: "2 - Asking if the client wants to proceed with hiring",
+       questions: [
+         "Would you like to proceed with hiring any of the maids please?",
+         "May I ask if you would like to proceed with hiring any of the maids, please?",
+         "Are you ready to start the hiring process?",
+         "May I ask if you've started the hiring process, please?",
+         "Would you like to proceed with your hiring process, please?",
+         "May I ask if you started with the hiring process, please?"
+       ],
+       outcomes: [
+         { reengagement: "NO", sale: "NO", botCanDo: "YES", count: 27 },
+         { reengagement: "YES", sale: "NO", botCanDo: "YES", count: 11 }
+       ]
+     },
+     {
+       category: "3 - Others",
+       questions: [
+         "May I know when you are planning to process your maid's visa?",
+         "How may I assist you further with our services, please?",
+         "May I ask what you are comparing us to, and what prices do you have in mind?",
+         "How urgently do you need a maid inside your house?",
+         "Would you consider hiring full-time live-out maid, please?",
+         "The price difference for our Filipina nanny services is due to factors such as higher salaries, recruitment, and training costs. I recommend our qualified English-speaking African candidates."
+       ],
+       outcomes: [
+         { reengagement: "NO", sale: "NO", botCanDo: "YES", count: 38 },
+         { reengagement: "YES", sale: "NO", botCanDo: "YES", count: 6 }
+       ]
+     }
+   ];
+ 
+   const totalCases = noResponseData.reduce((sum, category) => 
+     sum + category.outcomes.reduce((catSum, outcome) => catSum + outcome.count, 0), 0
+   );
+ 
+   return (
+     <motion.div
+       initial={{ opacity: 0, y: 20 }}
+       animate={{ opacity: 1, y: 0 }}
+       className="space-y-6"
+     >
+       <div className="bg-white rounded-xl shadow-lg p-6">
+         <h3 className="text-lg font-semibold text-gray-900 mb-4">No Response from Client Details (279 cases - 43.0%)</h3>
+         <p className="text-sm text-gray-600 mb-6">Detailed analysis of conversations where clients did not respond</p>
+         
+         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
+           <div className="text-center p-4 bg-red-50 rounded-lg">
+             <div className="text-2xl font-bold text-red-600">279</div>
+             <div className="text-sm text-red-600">Total Cases</div>
+           </div>
+           <div className="text-center p-4 bg-orange-50 rounded-lg">
+             <div className="text-2xl font-bold text-orange-600">43.0%</div>
+             <div className="text-sm text-orange-600">Of All Conversations</div>
+           </div>
+           <div className="text-center p-4 bg-blue-50 rounded-lg">
+             <div className="text-2xl font-bold text-blue-600">648</div>
+             <div className="text-sm text-blue-600">Total Conversations</div>
+           </div>
+           <div className="text-center p-4 bg-green-50 rounded-lg">
+             <div className="text-2xl font-bold text-green-600">{totalCases}</div>
+             <div className="text-sm text-green-600">Analyzed Cases</div>
+           </div>
+         </div>
+       </div>
+ 
+       {/* Detailed Breakdown */}
+       {noResponseData.map((category, categoryIndex) => (
+         <div key={categoryIndex} className="bg-white rounded-xl shadow-lg p-6">
+           <h3 className="text-lg font-semibold text-gray-900 mb-4">{category.category}</h3>
+           
+           {/* Questions List */}
+           <div className="mb-6">
+             <h4 className="text-md font-medium text-gray-700 mb-3">Questions Asked:</h4>
+             <div className="space-y-2">
+               {category.questions.map((question, qIndex) => (
+                 <div key={qIndex} className="p-3 bg-gray-50 rounded-lg">
+                   <p className="text-sm text-gray-800">{question}</p>
+                 </div>
+               ))}
+             </div>
+           </div>
+ 
+           {/* Outcomes Table */}
+           <div className="overflow-x-auto">
+             <table className="min-w-full divide-y divide-gray-200">
+               <thead className="bg-gray-50">
+                 <tr>
+                   <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                     Re-engagement
+                   </th>
+                   <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                     Sale happened
+                   </th>
+                   <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                     Bot can do it
+                   </th>
+                   <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                     Count
+                   </th>
+                 </tr>
+               </thead>
+               <tbody className="bg-white divide-y divide-gray-200">
+                 {category.outcomes.map((outcome, oIndex) => (
+                   <tr key={oIndex} className="hover:bg-gray-50">
+                     <td className="px-4 py-3 whitespace-nowrap text-sm font-medium">
+                       <span className={`px-2 py-1 rounded-full text-xs ${
+                         outcome.reengagement === 'YES' 
+                           ? 'bg-green-100 text-green-800' 
+                           : 'bg-red-100 text-red-800'
+                       }`}>
+                         {outcome.reengagement}
+                       </span>
+                     </td>
+                     <td className="px-4 py-3 whitespace-nowrap text-sm font-medium">
+                       <span className={`px-2 py-1 rounded-full text-xs ${
+                         outcome.sale === 'YES' 
+                           ? 'bg-green-100 text-green-800' 
+                           : 'bg-red-100 text-red-800'
+                       }`}>
+                         {outcome.sale}
+                       </span>
+                     </td>
+                     <td className="px-4 py-3 whitespace-nowrap text-sm font-medium">
+                       <span className={`px-2 py-1 rounded-full text-xs ${
+                         outcome.botCanDo === 'YES' 
+                           ? 'bg-green-100 text-green-800' 
+                           : 'bg-red-100 text-red-800'
+                       }`}>
+                         {outcome.botCanDo}
+                       </span>
+                     </td>
+                     <td className="px-4 py-3 whitespace-nowrap text-sm font-bold text-gray-900">
+                       {outcome.count}
+                     </td>
+                   </tr>
+                 ))}
+               </tbody>
+             </table>
+           </div>
+ 
+           {/* Summary Stats */}
+           <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
+             <div className="text-center p-3 bg-blue-50 rounded-lg">
+               <div className="text-lg font-bold text-blue-600">
+                 {category.outcomes.reduce((sum, outcome) => sum + outcome.count, 0)}
+               </div>
+               <div className="text-sm text-blue-600">Total Cases</div>
+             </div>
+             <div className="text-center p-3 bg-green-50 rounded-lg">
+               <div className="text-lg font-bold text-green-600">
+                 {category.outcomes.filter(o => o.reengagement === 'YES').reduce((sum, outcome) => sum + outcome.count, 0)}
+               </div>
+               <div className="text-sm text-green-600">Re-engaged</div>
+             </div>
+             <div className="text-center p-3 bg-purple-50 rounded-lg">
+               <div className="text-lg font-bold text-purple-600">
+                 {category.outcomes.filter(o => o.sale === 'YES').reduce((sum, outcome) => sum + outcome.count, 0)}
+               </div>
+               <div className="text-sm text-purple-600">Sales</div>
+             </div>
+           </div>
+         </div>
+       ))}
+ 
+       {/* Overall Summary */}
+       <div className="bg-white rounded-xl shadow-lg p-6">
+         <h3 className="text-lg font-semibold text-gray-900 mb-4">Overall Summary</h3>
+         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+           <div className="text-center p-4 bg-blue-50 rounded-lg">
+             <div className="text-2xl font-bold text-blue-600">
+               {noResponseData.reduce((sum, category) => 
+                 sum + category.outcomes.reduce((catSum, outcome) => catSum + outcome.count, 0), 0
+               )}
+             </div>
+             <div className="text-sm text-blue-600">Total Analyzed</div>
+           </div>
+           <div className="text-center p-4 bg-green-50 rounded-lg">
+             <div className="text-2xl font-bold text-green-600">
+               {noResponseData.reduce((sum, category) => 
+                 sum + category.outcomes.filter(o => o.reengagement === 'YES').reduce((catSum, outcome) => catSum + outcome.count, 0), 0
+               )}
+             </div>
+             <div className="text-sm text-green-600">Total Re-engaged</div>
+           </div>
+           <div className="text-center p-4 bg-purple-50 rounded-lg">
+             <div className="text-2xl font-bold text-purple-600">
+               {noResponseData.reduce((sum, category) => 
+                 sum + category.outcomes.filter(o => o.sale === 'YES').reduce((sum, outcome) => sum + outcome.count, 0), 0
+               )}
+             </div>
+             <div className="text-sm text-purple-600">Total Sales</div>
+           </div>
+           <div className="text-center p-4 bg-orange-50 rounded-lg">
+             <div className="text-2xl font-bold text-orange-600">
+               {noResponseData.reduce((sum, category) => 
+                 sum + category.outcomes.filter(o => o.botCanDo === 'YES').reduce((catSum, outcome) => catSum + outcome.count, 0), 0
+               )}
+             </div>
+             <div className="text-sm text-orange-600">Bot Can Handle</div>
+           </div>
+         </div>
+       </div>
+     </motion.div>
+   );
+ }
+ 
+ // Reusable Components
 function MetricCard({ title, value, icon: Icon, color, trend }) {
   const colorClasses = {
     blue: 'bg-blue-500',
